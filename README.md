@@ -2,13 +2,17 @@ HelloFresh Web-Test
 =====
 
 
-[![release](http://github-release-version.herokuapp.com/github/yandex-qatools/ashot/release.svg?style=flat)](https://github.com/yandex-qatools/ashot/releases/latest) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.ashot/ashot/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.ashot/ashot)
-
 ##### Configurator:
 
 * Run tests in parallel mode
 
-```mvn clean test -P Parallel 
+``` mvn clean test -P Parallel 
+```
+
+```java
+Screenshot myScreenshot = new AShot()
+  .addIgnoredElement(By.cssSelector("#weather .blinking_element")) // ignored element(s)
+  .takeScreenshot(driver, yandexWeatherElement);
 ```
 
 * Run tests for different browsers/OS by configuring
