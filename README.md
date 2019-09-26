@@ -13,33 +13,32 @@ mvn clean test -P Parallel
 * Run tests for different browsers/OS by configuring
 
 ```java
-mvn clean test -Dbrowser=chrome -Dos=windows
+mvn clean test -D browser=chrome -D os=windows
 ```
 
 ```java
-mvn clean test -Dbrowser=firefox -Dos=windows
+mvn clean test -D browser=firefox -D os=windows
 ```
 
 ```java
-mvn clean test -Dbrowser=chrome -Dos=linux
+mvn clean test -D browser=chrome -D os=linux
 ```
 
 ```java
-mvn clean test -Dbrowser=firefox -Dos=linux
+mvn clean test -D browser=firefox -D os=linux
 ```
 
 * Run tests for different environments(urls) by configuring/by command-line.
 
 ```java
-mvn clean test -Durl=http://dev.automationpractice.com/index.php
+mvn clean test -D url=http://dev.automationpractice.com/index.php
 ```
 
 ```java
-mvn clean test -Durl=http://qa.automationpractice.com/index.php
+mvn clean test -D url=http://qa.automationpractice.com/index.php
 ```
 
-* Reading test data from file ,for example, the name of dress, size and color in the checkout test. 
-Refer data.json under src/test/resources
+* Reading test data from file Refer data.json under src/test/resources
 
 ```java
 "NewOrder": [
@@ -56,7 +55,39 @@ Refer data.json under src/test/resources
 
 ##### Logging
 
-* Using log4j for logging
+* Using log4j for logging 
 * log4j.properties file under "src/test/resources"
 * Sample output will be under "log" folder
+* Output will be on Console,File.txt and .html file
+
+##### Taking screenshot on failed tests
+
+##### Generation human readable report
+
+##### Generating random values for insignificant test data, for example, for new user
+
+##### WebDriver factory
+
+##### Encapsulation layers like test data, logic of tests, actions on web pages 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
