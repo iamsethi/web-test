@@ -6,41 +6,43 @@ HelloFresh Web-Test
 
 * Run tests in parallel mode
 
-``` mvn clean test -P Parallel 
-```
-
 ```java
-Screenshot myScreenshot = new AShot()
-  .addIgnoredElement(By.cssSelector("#weather .blinking_element")) // ignored element(s)
-  .takeScreenshot(driver, yandexWeatherElement);
+mvn clean test -P Parallel
 ```
 
 * Run tests for different browsers/OS by configuring
 
-```mvn clean test -Dbrowser=chrome -Dos=windows
+```java
+`mvn clean test -Dbrowser=chrome -Dos=windows
 ```
 
-```mvn clean test -Dbrowser=firefox -Dos=windows
+```java
+mvn clean test -Dbrowser=firefox -Dos=windows
 ```
 
-```mvn clean test -Dbrowser=chrome -Dos=linux
+```java
+mvn clean test -Dbrowser=chrome -Dos=linux
 ```
 
-```mvn clean test -Dbrowser=firefox -Dos=linux
+```java
+mvn clean test -Dbrowser=firefox -Dos=linux
 ```
 
 * Run tests for different environments(urls) by configuring/by command-line.
 
-```mvn clean test -Durl=http://dev.automationpractice.com/index.php
+```java
+mvn clean test -Durl=http://dev.automationpractice.com/index.php
 ```
 
-```mvn clean test -Durl=http://qa.automationpractice.com/index.php
+```java
+mvn clean test -Durl=http://qa.automationpractice.com/index.php
 ```
 
 * Reading test data from file ,for example, the name of dress, size and color in the checkout test. 
 Refer data.json under src/test/resources
 
-```	"NewOrder": [
+```java
+	"NewOrder": [
 				"btn_submit:click",
 				"btn_checkout:click",
 				"btn_proceed_checkout:click",
