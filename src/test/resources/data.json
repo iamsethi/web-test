@@ -1,0 +1,62 @@
+{
+	"Commondata": {
+		"LoginPage": {
+			"ExistingUser": [
+				"tbx_email:hf_challenge_123456@hf123456.com",
+				"tbx_password:12345678",
+				"btn_SubmitLogin:click"
+			],
+			"NewUser": [
+				"rbn_gender2:click",
+				"tbx_customer_firstname:Firstname",
+				"tbx_customer_lastname:Lastname",
+				"tbx_password:Qwerty",
+				"ddl_days:1",
+				"ddl_months:1",
+				"ddl_years:2000",
+				"tbx_company:Company",
+				"tbx_address1:Qwerty",
+				"tbx_address2:zxcvb",
+				"tbx_city:Qwerty",
+				"ddl_state:6",
+				"tbx_postcode:12345",
+				"tbx_other:Qwerty",
+				"tbx_phone:12345123123",
+				"tbx_phone_mobile:12345123123",
+				"tbx_alias:hf",
+				"btn_submitAccount:click"
+			]
+		},
+		"MyAccountPage": {
+			"ExistingAccount": [
+				"lbl_heading:MY ACCOUNT",
+				"lbl_account:Joe Black",
+				"lbl_info_account:Welcome to your account.",
+				"btn_logout:isDisplayed"
+			],
+			"NewAccount": [
+				"lbl_heading:MY ACCOUNT",
+				"lbl_account:Firstname Lastname",
+				"lbl_info_account:Welcome to your account."
+			]
+		},
+		"OrderPage": {
+			"NewOrder": [
+				"btn_submit:click",
+				"btn_checkout:click",
+				"btn_proceed_checkout:click",
+				"btn_process_address:click",
+				"rbn_accept_term:click",
+				"btn_process_carrier:click",
+				"btn_pay_by_bankwire:click",
+				"btn_confirm_order:click"
+			],
+			"VerifyOrder": [
+				"lbl_heading:ORDER CONFIRMATION",
+				"lbl_shipping:04. Shipping",
+				"lbl_payment:05. Payment",
+				"lbl_order_complete:Your ketan on My Store is complete."
+			]
+		}
+	}
+}
