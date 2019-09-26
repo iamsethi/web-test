@@ -4,6 +4,49 @@ HelloFresh Web-Test
 
 [![release](http://github-release-version.herokuapp.com/github/yandex-qatools/ashot/release.svg?style=flat)](https://github.com/yandex-qatools/ashot/releases/latest) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.ashot/ashot/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.ashot/ashot)
 
+##### Configurator:
+
+* Run tests in parallel mode
+
+```mvn clean test -P Parallel 
+```
+
+* Run tests for different browsers/OS by configuring
+
+```mvn clean test -Dbrowser=chrome -Dos=windows
+```
+
+```mvn clean test -Dbrowser=firefox -Dos=windows
+```
+
+```mvn clean test -Dbrowser=chrome -Dos=linux
+```
+
+```mvn clean test -Dbrowser=firefox -Dos=linux
+```
+
+* Run tests for different environments(urls) by configuring/by command-line.
+
+```mvn clean test -Durl=http://dev.automationpractice.com/index.php
+```
+
+```mvn clean test -Durl=http://qa.automationpractice.com/index.php
+```
+
+* Reading test data from file ,for example, the name of dress, size and color in the checkout test. 
+Refer data.json under src/test/resources
+
+```	"NewOrder": [
+				"btn_submit:click",
+				"btn_checkout:click",
+				"btn_proceed_checkout:click",
+				"btn_process_address:click",
+				"rbn_accept_term:click",
+				"btn_process_carrier:click",
+				"btn_pay_by_bankwire:click",
+				"btn_confirm_order:click"
+			],
+```
 
 ##### Logging
 
@@ -11,44 +54,8 @@ HelloFresh Web-Test
 * log4j.properties file under "src/test/resources"
 * Sample output will be under "log" folder
 
-##### WebElement view
 
-aShot takes a screenshot in three simple steps:
-* Capture a screenshot of the entire page
-* Find the element's size and position   
-* Crop the original screenshot
 
-As a result, aShot provides an image of the WebElement
-![images snippet](/doc/img/images_intent_blur.png)
-
-#### Maven dependency
-```xml
-<dependency>
-    <groupId>ru.yandex.qatools.ashot</groupId>
-    <artifactId>ashot</artifactId>
-    <version>1.5.2</version>
-</dependency>
-``` 
-
-##### Capturing the entire page
-
-Different WebDrivers take screenshots differently. Some WebDrivers provide a screenshot of the entire page while others handle the viewport only. aShot might be configured to handle browsers with the viewport problem. This example configuration gives a screenshot of the entire page even for Chrome, Mobile Safari, etc. 
-```java
-new AShot()
-  .shootingStrategy(ShootingStrategies.viewportPasting(100))
-  .takeScreenshot(webDriver);
-```
-
-There are built-in strategies in ```ShootingStrategies``` for different use cases. In case there are no suitable strategies it is possible to build it using existing strategies as decorators or implement your own.
-```
-CutStrategy cutting = new VariableCutStrategy(HEADER_IOS_8_MIN, HEADER_IOS_8_MAX, VIEWPORT_MIN_IOS_8_SIM);
-ShootingStrategy rotating = new RotatingDecorator(cutting, ShootingStrategies.simple());
-ShootingStrategy pasting = new ViewportPastingDecorator(rotating)
-    .withScrollTimeout(scrollTimeout);   
-new AShot()
-  .shootingStrategy(pasting)
-  .takeScreenshot(webDriver);
-```
 
 ##### Capturing the WebElement
 
