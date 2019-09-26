@@ -11,6 +11,7 @@ public class ExtentManager {
 			// Set HTML reporting file location
 			String workingDir = System.getProperty("user.dir");
 			extent = new ExtentReports(workingDir + "\\ExtentReports\\ExtentReportResults.html", true);
+
 		}
 		return extent;
 	}

@@ -11,7 +11,7 @@ public class HomePage extends BasePage {
 		super(driver);
 	}
 
-	@FindBy(how = How.CLASS_NAME, using = "login")
+	@FindBy(how = How.CLASS_NAME, using = "log")
 	public WebElement btn_login;
 
 	public void clickOnLoginButton() {
