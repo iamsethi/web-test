@@ -17,8 +17,9 @@ public class DriverFactory {
 
 	private static final BiFunction<String, String, WebDriver> chromeSupplier = (os, url) -> {
 		switch (os) {
-		case "Linux":
+		case "linux":
 			System.setProperty("webdriver.chrome.driver", driverFile + "/chromedriver");
+			break;
 		default:
 			System.setProperty("webdriver.chrome.driver", driverFile + "/chromedriver.exe");
 
@@ -30,8 +31,9 @@ public class DriverFactory {
 
 	private static final BiFunction<String, String, WebDriver> firefoxSupplier = (os, url) -> {
 		switch (os) {
-		case "Linux":
+		case "linux":
 			System.setProperty("webdriver.gecko.driver", driverFile + "/geckodriver");
+			break;
 		default:
 			System.setProperty("webdriver.gecko.driver", driverFile + "/geckodriver.exe");
 
