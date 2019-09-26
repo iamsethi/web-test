@@ -13,14 +13,14 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class DriverFactory {
 
 	WebDriver driver;
-	private static String driverFile =  "src/test/resources/drivers";
-	
+	private static String driverFile = "src/test/resources/drivers";
+
 	private static final BiFunction<String, String, WebDriver> chromeSupplier = (os, url) -> {
 		switch (os) {
 		case "Linux":
-			System.setProperty("webdriver.chrome.driver", driverFile+"/chromedriver");
+			System.setProperty("webdriver.chrome.driver", driverFile + "/chromedriver");
 		default:
-			System.setProperty("webdriver.chrome.driver", driverFile+"/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", driverFile + "/chromedriver.exe");
 
 		}
 		WebDriver driver = new ChromeDriver();
@@ -31,9 +31,9 @@ public class DriverFactory {
 	private static final BiFunction<String, String, WebDriver> firefoxSupplier = (os, url) -> {
 		switch (os) {
 		case "Linux":
-			System.setProperty("webdriver.gecko.driver", driverFile+"/geckodriver");
+			System.setProperty("webdriver.gecko.driver", driverFile + "/geckodriver");
 		default:
-			System.setProperty("webdriver.gecko.driver", driverFile+"/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", driverFile + "/geckodriver.exe");
 
 		}
 		WebDriver driver = new FirefoxDriver();
@@ -42,14 +42,14 @@ public class DriverFactory {
 	};
 
 	private static final BiFunction<String, String, WebDriver> internetexplorerSupplier = (os, url) -> {
-		System.setProperty("webdriver.ie.driver", driverFile+"/IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", driverFile + "/IEDriverServer.exe");
 		WebDriver driver = new InternetExplorerDriver();
 		openBrowser(driver, url);
 		return driver;
 	};
 
 	private static final BiFunction<String, String, WebDriver> edgeSupplier = (os, url) -> {
-		System.setProperty("webdriver.edge.driver", driverFile+"/MicrosoftWebDriver.exe");
+		System.setProperty("webdriver.edge.driver", driverFile + "/MicrosoftWebDriver.exe");
 		WebDriver driver = new EdgeDriver();
 		openBrowser(driver, url);
 		return driver;
@@ -77,10 +77,18 @@ public class DriverFactory {
 	}
 
 	public static WebDriver getDriver(String browser, String os, String url) {
-		if (System.getProperty("browser") != null) {
-			return MAP.get(System.getProperty("browser")).apply(os, url);
+		if (System.getProperty("os") != null) {
+			if (System.getProperty("browser") != null) {
+				return MAP.get(System.getProperty("browser")).apply(System.getProperty("os"), url);
+			} else {
+				return MAP.get(browser).apply(System.getProperty("os"), url);
+			}
 		} else {
-			return MAP.get(browser).apply(os, url);
+			if (System.getProperty("browser") != null) {
+				return MAP.get(System.getProperty("browser")).apply(os, url);
+			} else {
+				return MAP.get(browser).apply(os, url);
+			}
 		}
 
 	}
