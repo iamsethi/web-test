@@ -8,9 +8,12 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.internal.WrapsElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -86,14 +89,27 @@ public class JsonDataReader {
 					select.selectByValue(value);
 				} else if (locator.startsWith("btn_")) {
 					log.info("Clicking " + locator + " with value : " + value + " ");
-					wait.until(ExpectedConditions.elementToBeClickable(element));
-					element.click();
+					checkIfStale(id, wait, element);
+
 				}
 			} catch (Exception e) {
 				log.error(e);
 				throw new RuntimeException(e);
 			}
 		}
+	}
+
+	private void checkIfStale(BasePage id, WebDriverWait wait, WebElement element) {
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+		} catch (ElementClickInterceptedException | StaleElementReferenceException e) {
+			JavascriptExecutor js = (JavascriptExecutor) id.driver;
+			js.executeScript("arguments[0].click();", element);
+		} catch (NoSuchElementException e) {
+			throw new RuntimeException(e);
+		}
+
 	}
 
 	public void verifyFields(BasePage id, JsonElement dataContainer) {
@@ -103,7 +119,7 @@ public class JsonDataReader {
 			String value = entry.getValue();
 			Class<?> aClass = id.getClass();
 			Logger log = Logger.getLogger(aClass);
-
+			WebDriverWait wait = new WebDriverWait(id.driver, 10);
 			try {
 				Field field = aClass.getField(locator);
 				WebElement element = ((WrapsElement) field.get(id)).getWrappedElement();
@@ -111,6 +127,7 @@ public class JsonDataReader {
 				assertTrue(element.isDisplayed());
 				if (locator.startsWith("tbx_") || locator.startsWith("lbl_")) {
 					log.info("Checking that " + locator + " contains : " + value + " ");
+					wait.until(ExpectedConditions.textToBePresentInElement(element, value));
 					assertTrue(element.getText().contains(value),
 							"Expected :" + value + " but found :" + element.getText() + " ");
 

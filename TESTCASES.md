@@ -47,3 +47,6 @@
 * Order confirmation page(?controller=order-confirmation) is opened
 * The order is complete.
 * Current page is the last step of ordering 
+
+
+

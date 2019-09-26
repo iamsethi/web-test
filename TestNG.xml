@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Hellofresh UI Suite">
+	<listeners>
+		<listener
+			class-name="com.hellofresh.challenge.extent.reports.TestListener" />
+	</listeners>
+	<test name="UI Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="os" value="Windows" />
+		<parameter name="url" value="http://automationpractice.com/index.php" />
+		<classes>
+			<class name="com.hellofresh.challenge.web.WebTest">
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -13,9 +13,8 @@
 		<selenium.version>3.11.0</selenium.version>
 		<log4j.version>1.2.17</log4j.version>
 		<common.io.version>2.6</common.io.version>
-		<extentreports>2.41.2</extentreports>
-		<rest>3.1.1</rest>
-		<jackson>2.9.8</jackson>
+		<extent.version>2.41.2</extent.version>
+		<testng.version>6.8</testng.version>
 		<maven-surefire-plugin>2.21.0</maven-surefire-plugin>
 	</properties>
 
@@ -34,7 +33,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.8</version>
+			<version>${testng.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -49,20 +48,13 @@
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>${extentreports}</version>
-		</dependency>
-		<dependency>
-			<groupId>io.rest-assured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>${rest}</version>
+			<version>${extent.version}</version>
 		</dependency>
 	</dependencies>
 
-
 	<profiles>
 		<profile>
-			<id>Web</id>
-
+			<id>Parallel</id>
 			<build>
 				<pluginManagement>
 					<plugins>
@@ -73,7 +65,7 @@
 							<configuration>
 								<forkCount>0</forkCount>
 								<suiteXmlFiles>
-									<suiteXmlFile>UITestNG.xml</suiteXmlFile>
+									<suiteXmlFile>TestNGParallel.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -81,10 +73,12 @@
 				</pluginManagement>
 			</build>
 		</profile>
+
 		<profile>
-
-			<id>Api</id>
-
+			<id>Sequential</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
 			<build>
 				<pluginManagement>
 					<plugins>
@@ -95,20 +89,21 @@
 							<configuration>
 								<forkCount>0</forkCount>
 								<suiteXmlFiles>
-									<suiteXmlFile>ApiTestNG.xml</suiteXmlFile>
+									<suiteXmlFile>TestNG.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
 					</plugins>
 				</pluginManagement>
 			</build>
-
 		</profile>
+
+
 	</profiles>
 
 
-	<build>
 
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -119,22 +114,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>${maven-surefire-plugin}</version>
-				<configuration>
-					<systemPropertyVariables>
-						<profileId>${project.activeProfiles[0].id}</profileId>
-					</systemPropertyVariables>
-				</configuration>
-			</plugin>
-
 		</plugins>
-
-
-
 	</build>
 
 

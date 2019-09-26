@@ -8,7 +8,7 @@
 	<test name="UI Test" parallel="methods" thread-count="3">
 		<parameter name="browser" value="chrome" />
 		<parameter name="os" value="Windows" />
-		<parameter name="url" value="http://automationpractice.com/" />
+		<parameter name="url" value="http://automationpractice.com/index.php" />
 		<classes>
 			<class name="com.hellofresh.challenge.web.WebTest">
 			</class>
