@@ -1,15 +1,18 @@
 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onStart method UI Test
  2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestStart method signInTest start
- 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestStart method logInTest start
  2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestStart method checkoutTest start
+ 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestStart method logInTest start
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_email with value : hf_challenge_123456@hf123456.com 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_email with value : hf_challenge_123456@hf123456.com 
+ 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_password with value : 12345678 
+ 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_password with value : 12345678 
+ 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Clicking btn_SubmitLogin with value : click 
+ 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Clicking btn_SubmitLogin with value : click 
+ 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_heading is displayed... 
+ 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_heading contains : MY ACCOUNT 
+ 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestFailure method logInTest failed
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Clicking rbn_gender2 with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_password with value : 12345678 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_password with value : 12345678 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_customer_firstname with value : Firstname 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Clicking btn_SubmitLogin with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Clicking btn_SubmitLogin with value : click 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_customer_lastname with value : Lastname 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_password with value : Qwerty 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Selecting ddl_days with value : 1 
@@ -20,46 +23,26 @@
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_address2 with value : zxcvb 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_city with value : Qwerty 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Selecting ddl_state with value : 6 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_heading is displayed... 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_postcode with value : 12345 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_heading contains : MY ACCOUNT 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_account is displayed... 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_other with value : Qwerty 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_account contains : Joe Black 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_info_account is displayed... 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_phone with value : 12345123123 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_info_account contains : Welcome to your account. 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that btn_logout is displayed... 
- 2019-09-26--INFO -com.hellofresh.challenge.web.WebTest:Valid user is able to login successfully
- 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestSuccess method logInTest succeed
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_phone_mobile with value : 12345123123 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Filling tbx_alias with value : hf 
  2019-09-26--INFO -com.hellofresh.challenge.pages.LoginPage:Clicking btn_submitAccount with value : click 
  2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_heading is displayed... 
  2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_heading contains : MY ACCOUNT 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_account is displayed... 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_account contains : Firstname Lastname 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_info_account is displayed... 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.MyAccountPage:Checking that lbl_info_account contains : Welcome to your account. 
- 2019-09-26--INFO -com.hellofresh.challenge.web.WebTest:Account created successfully
- 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestSuccess method signInTest succeed
+ 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestFailure method signInTest failed
  2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking btn_submit with value : click 
  2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking btn_checkout with value : click 
  2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking btn_proceed_checkout with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking btn_process_address with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking rbn_accept_term with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking btn_process_carrier with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking btn_pay_by_bankwire with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Clicking btn_confirm_order with value : click 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_heading is displayed... 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_heading contains : ORDER CONFIRMATION 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_shipping is displayed... 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_shipping contains : 04. Shipping 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_payment is displayed... 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_payment contains : 05. Payment 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_order_complete is displayed... 
- 2019-09-26--INFO -com.hellofresh.challenge.pages.OrderPage:Checking that lbl_order_complete contains : Your order on My Store is complete. 
- 2019-09-26--INFO -com.hellofresh.challenge.web.WebTest:User is able to checkout successfully
- 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestSuccess method checkoutTest succeed
+ 2019-09-26--ERROR-com.hellofresh.challenge.pages.OrderPage:org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name='processAddress']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'ICEN062', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 69.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190917135527, moz:geckodriverVersion: 0.25.0, moz:headless: false, moz:processID: 23308, moz:profile: C:\Users\ketan.sethi\AppDat..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fef1678f-633b-48cf-8bef-8961e7008ca8
+*** Element info: {Using=name, value=processAddress}
+ 2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestFailure method checkoutTest failed
  2019-09-26--INFO -com.hellofresh.challenge.extent.reports.TestListener:onFinish method UI Test
  
