@@ -60,9 +60,13 @@ mvn clean test -Durl=http://qa.automationpractice.com/index.php
 * Sample output will be under "log" folder
 * Output will be on Console,File.txt anD.html file
 
-##### Taking screenshot on faileDtests
+##### Taking screenshot on failed tests
+* Screenshot will get attached in report if any test case fails  
 
 ##### Generation human readable report
+* Integrated framework with Extent Reports
+* ![Image description](link-to-image)
+
 
 ##### Generating random values for insignificant test data, for example, for new user
 
