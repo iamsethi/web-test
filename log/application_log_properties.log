@@ -1,6 +1,12 @@
 2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onStart method UI Test
+ 2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestStart method signInTest start
+ 2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestSkipped method signInTest skipped
+ 2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestFailure method signInTest failed
  2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestStart method checkoutTest start
  2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestSkipped method checkoutTest skipped
  2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestFailure method checkoutTest failed
+ 2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestStart method logInTest start
+ 2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestSkipped method logInTest skipped
+ 2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onTestFailure method logInTest failed
  2019-09-27--INFO -com.hellofresh.challenge.extent.reports.TestListener:onFinish method UI Test
  

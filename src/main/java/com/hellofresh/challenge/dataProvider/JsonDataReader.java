@@ -119,7 +119,7 @@ public class JsonDataReader {
 			String value = entry.getValue();
 			Class<?> aClass = id.getClass();
 			Logger log = Logger.getLogger(aClass);
-			WebDriverWait wait = new WebDriverWait(id.driver, 10);
+			WebDriverWait wait = new WebDriverWait(id.driver, 15);
 			try {
 				Field field = aClass.getField(locator);
 				WebElement element = ((WrapsElement) field.get(id)).getWrappedElement();
