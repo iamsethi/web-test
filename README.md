@@ -1,7 +1,6 @@
 HelloFresh Web-Test
 =====
 
-
 ##### Configurator:
 
 * Run tests in parallel mode
@@ -11,6 +10,14 @@ mvn clean test -P Parallel
 ```
 
 * Run tests for different browsers/OS by configuring
+
+#### Prerequisite - To run on Linux OS - src/test/resources/drivers
+```java
+chmod +x geckodriver  
+```
+```java
+chmod +x chromedriver
+```
 
 ```java
 mvn clean test -Dbrowser=chrome -Dos=windows
