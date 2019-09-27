@@ -58,7 +58,7 @@ mvn clean test -Durl=http://qa.automationpractice.com/index.php
 * Using log4j for logging 
 * log4j.properties file under "src/test/resources"
 * Sample output will be under "log" folder
-* Output will be on Console,File.txt anD.html file
+* Output will be on Console,File.txt and .html file
 
 ##### Taking screenshot on failed tests
 * Screenshot will get attached in report if any test case fails  
