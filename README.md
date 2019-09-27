@@ -60,9 +60,6 @@ mvn clean test -Durl=http://qa.automationpractice.com/index.php
 * Sample output will be under "log" folder
 * Output will be on Console,File.txt and .html file
 
-<<<<<<< HEAD
-##### Taking screenshot on failed tests
-=======
 ##### Taking screenshot on failed tests [Sample Output](https://web-test-hellofresh.s3-eu-west-1.amazonaws.com/ExtentReportResults_Failed_Sample.html)
 * Screenshot will get attached in report if any test case fails  
 >>>>>>> branch 'master' of https://github.com/iamsethi/web-test.git
