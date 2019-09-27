@@ -65,15 +65,16 @@ mvn clean test -Durl=http://qa.automationpractice.com/index.php
 
 ##### Generation human readable report
 * Integrated framework with Extent Reports
-* ![Extent Report](https://raw.githubusercontent.com/iamsethi/web-test/master/ExtentReports/ExtentReportResults.html)
-
+* Ouput report has two tabs at left top corner to view the report in sequential format or graph format
 
 ##### Generating random values for insignificant test data, for example, for new user
+All data is stored is data.json in project directory
 
 ##### WebDriver factory
+* Currently framework supports Chrome(77 version),Firefox,IE and Edge browser 
 
 ##### Encapsulation layers like test data, logic of tests, actions on web pages 
-
+* Framework supports PageFactory Design pattern so that each web page in a application there is a corresponding page class which contains the web elements of that page and methods to perform action on those web elements
 
 
 
