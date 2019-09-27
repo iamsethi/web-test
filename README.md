@@ -62,7 +62,6 @@ mvn clean test -Durl=http://qa.automationpractice.com/index.php
 
 ##### Taking screenshot on failed tests [Sample Output](https://web-test-hellofresh.s3-eu-west-1.amazonaws.com/ExtentReportResults_Failed_Sample.html)
 * Screenshot will get attached in report if any test case fails  
->>>>>>> branch 'master' of https://github.com/iamsethi/web-test.git
 
 ##### Generation human readable report e.g [Sample Output](https://web-test-hellofresh.s3-eu-west-1.amazonaws.com/ExtentReportResults.html)
 * Integrated framework with Extent Reports
