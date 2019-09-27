@@ -53,23 +53,32 @@ mvn clean test -Durl=http://qa.automationpractice.com/index.php
 		],
 ```
 
-##### Logging
+##### Logging [Sample Output](https://web-test-hellofresh.s3-eu-west-1.amazonaws.com/application.html)
 
 * Using log4j for logging 
 * log4j.properties file under "src/test/resources"
 * Sample output will be under "log" folder
 * Output will be on Console,File.txt and .html file
 
+<<<<<<< HEAD
 ##### Taking screenshot on failed tests
+=======
+##### Taking screenshot on failed tests [Sample Output](https://web-test-hellofresh.s3-eu-west-1.amazonaws.com/ExtentReportResults_Failed_Sample.html)
+* Screenshot will get attached in report if any test case fails  
+>>>>>>> branch 'master' of https://github.com/iamsethi/web-test.git
 
-##### Generation human readable report
+##### Generation human readable report e.g [Sample Output](https://web-test-hellofresh.s3-eu-west-1.amazonaws.com/ExtentReportResults.html)
+* Integrated framework with Extent Reports
+* Ouput report has two tabs at left top corner to view the report in sequential format or graph format
 
 ##### Generating random values for insignificant test data, for example, for new user
+All data is stored is data.json in project directory
 
 ##### WebDriver factory
+* Currently framework supports Chrome(77 version),Firefox,IE and Edge browser 
 
 ##### Encapsulation layers like test data, logic of tests, actions on web pages 
-
+* Framework supports PageFactory Design pattern so that each web page in a application there is a corresponding page class which contains the web elements of that page and methods to perform action on those web elements
 
 
 
