@@ -65,7 +65,7 @@ mvn clean test -Durl=http://qa.automationpractice.com/index.php
 
 ##### Generation human readable report
 * Integrated framework with Extent Reports
-* ![Image description](link-to-image)
+* ![Extent Report](https://raw.githubusercontent.com/iamsethi/web-test/master/ExtentReports/ExtentReportResults.html)
 
 
 ##### Generating random values for insignificant test data, for example, for new user
