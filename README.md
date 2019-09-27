@@ -3,7 +3,7 @@ HelloFresh Web-Test
 
 ##### Configurator:
 
-* Run tests in parallel mode
+* Run tests in parallel mode : by default it'll run on chrome browser and windows
 
 ```java
 mvn clean test -P Parallel
@@ -20,29 +20,29 @@ chmod +x chromedriver
 ```
 
 ```java
-mvn clean test -Dbrowser=chrome -Dos=windows
+mvn clean test -P Parallel -Dbrowser=chrome -Dos=windows
 ```
 
 ```java
-mvn clean test -Dbrowser=firefox -Dos=windows
+mvn clean test -P Parallel -Dbrowser=firefox -Dos=windows
 ```
 
 ```java
-mvn clean test -Dbrowser=chrome -Dos=linux
+mvn clean test -P Parallel -Dbrowser=chrome -Dos=linux
 ```
 
 ```java
-mvn clean test -Dbrowser=firefox -Dos=linux
+mvn clean test -P Parallel -Dbrowser=firefox -Dos=linux
 ```
 
 * Run tests for different environments(urls) by configuring/by command-line.
 
 ```java
-mvn clean test -Durl=http://dev.automationpractice.com/index.php
+mvn clean test -P Parallel -Durl=http://dev.automationpractice.com/index.php
 ```
 
 ```java
-mvn clean test -Durl=http://qa.automationpractice.com/index.php
+mvn clean test -P Parallel -Durl=http://qa.automationpractice.com/index.php
 ```
 
 * Reading test data from file Refer data.json under src/test/resources
